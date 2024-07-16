@@ -1,0 +1,11 @@
+pytest
+selenium
+pytest-selenium  # 不太合适
+pytest-order
+pytest-html
+
+# pytest==8.2.2
+# selenium==4.22.0
+# pytest-html==4.1.1
+# pytest-selenium==4.1.0
+# pytest-order==1.2.1
