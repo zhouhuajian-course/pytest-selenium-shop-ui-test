@@ -1,0 +1,150 @@
+{
+  "id": "552b1ea6-93d0-4342-9269-875667d35bdd",
+  "version": "2.0",
+  "name": "shop-admin-ui-test",
+  "url": "http://admin.shop.com/#/login",
+  "tests": [{
+    "id": "8ce1a134-a7f6-4979-b426-b24a0f9c3f65",
+    "name": "login-fail",
+    "commands": [{
+      "id": "3dd3e0b7-7b3b-4f22-9eb3-b387277b3677",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ae0f5b45-41dd-4963-8047-87c6f2b31ea7",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.el-form-item:nth-child(3) .el-input__inner", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "376e7031-850c-4654-ae88-7d6c2bf62fbe",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.el-input--suffix > .el-input__inner", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/div/form/div[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/input", "xpath:position"]
+      ],
+      "value": "123456"
+    }, {
+      "id": "83ecf41e-656f-4743-8b7c-b65afb58cf13",
+      "comment": "",
+      "command": "click",
+      "target": "css=.el-form-item__content > .el-button",
+      "targets": [
+        ["css=.el-form-item__content > .el-button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/div/form/div[4]/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'登录')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "687fc335-62bf-4777-8fd9-b19158cd7516",
+      "comment": "",
+      "command": "waitForText",
+      "target": "css=.el-message__content",
+      "targets": [
+        ["css=.el-message__content", "css:finder"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'用户名或密码错误')]", "xpath:innerText"]
+      ],
+      "value": "用户名或密码错误"
+    }]
+  }, {
+    "id": "b36bbc58-f56b-4cbc-bf10-1582de801be4",
+    "name": "login-success",
+    "commands": [{
+      "id": "182f8882-7540-477f-9c0d-6a8cb7357e1a",
+      "comment": "",
+      "command": "open",
+      "target": "http://admin.shop.com/#/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b51979da-5fbf-4338-8b0f-fa24c567b5e6",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.el-form-item:nth-child(3) .el-input__inner", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "3b835bfc-788e-4dd9-b60a-c0f29439b70e",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.el-input--suffix > .el-input__inner", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/div/form/div[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "63c24eee-fafa-4d76-a37b-c26712f95393",
+      "comment": "",
+      "command": "click",
+      "target": "css=.el-form-item__content > .el-button",
+      "targets": [
+        ["css=.el-form-item__content > .el-button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/div/form/div[4]/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'登录')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f285d35e-4272-4d20-95bf-1ded23a4026a",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.user-avatar",
+      "targets": [
+        ["css=.user-avatar", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/ul/div[3]/div/img", "xpath:idRelative"],
+        ["xpath=//div[3]/div/img", "xpath:position"]
+      ],
+      "value": "20000"
+    }]
+  }, {
+    "id": "34b51628-f94a-4990-8f0c-f73fdd05f7ec",
+    "name": "show-stats",
+    "commands": []
+  }],
+  "suites": [{
+    "id": "4ecb58be-563e-4284-ab2e-21f45d0d573e",
+    "name": "login-page",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["8ce1a134-a7f6-4979-b426-b24a0f9c3f65", "b36bbc58-f56b-4cbc-bf10-1582de801be4"]
+  }, {
+    "id": "5465cc59-b438-4380-82d4-2c768bf03fc3",
+    "name": "home-page",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["34b51628-f94a-4990-8f0c-f73fdd05f7ec"]
+  }],
+  "urls": ["http://admin.shop.com/", "http://admin.shop.com/#/login"],
+  "plugins": []
+}
