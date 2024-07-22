@@ -2,7 +2,7 @@
   "id": "552b1ea6-93d0-4342-9269-875667d35bdd",
   "version": "2.0",
   "name": "shop-admin-ui-test",
-  "url": "http://admin.shop.com/#/login",
+  "url": "http://admin.shop.com/#/pms/product",
   "tests": [{
     "id": "8ce1a134-a7f6-4979-b426-b24a0f9c3f65",
     "name": "login-fail",
@@ -129,6 +129,101 @@
     "id": "34b51628-f94a-4990-8f0c-f73fdd05f7ec",
     "name": "show-stats",
     "commands": []
+  }, {
+    "id": "05c00168-b249-4932-9701-b772e174f73c",
+    "name": "search-by-product-name",
+    "commands": [{
+      "id": "37d759f2-1997-4047-a7b3-c74a7c6f0b08",
+      "comment": "",
+      "command": "open",
+      "target": "http://admin.shop.com/#/pms/product",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2ba6df39-eba8-498a-8f89-29463f122f91",
+      "comment": "",
+      "command": "type",
+      "target": "css=.el-form-item:nth-child(1) .el-input__inner",
+      "targets": [
+        ["css=.el-form-item:nth-child(1) .el-input__inner", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div[2]/section/div/div/div/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "TEST-测试电视"
+    }, {
+      "id": "01352817-f022-42d2-b3d5-48d182c311f7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.el-button--primary:nth-child(3)",
+      "targets": [
+        ["css=.el-button--primary:nth-child(3)", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div[2]/section/div/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'查询结果')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "0204d52f-3614-4c4a-aa7d-906a6e7eb915",
+    "name": "search-by-product-serial-number",
+    "commands": [{
+      "id": "13837eeb-eb50-4edf-b991-d9c8c977eaaf",
+      "comment": "",
+      "command": "open",
+      "target": "http://admin.shop.com/#/pms/product",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a04f0e4c-f195-49b2-b379-b15ec79abe6c",
+      "comment": "",
+      "command": "type",
+      "target": "css=.el-form-item:nth-child(2) .el-input__inner",
+      "targets": [
+        ["css=.el-form-item:nth-child(2) .el-input__inner", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div[2]/section/div/div/div/div[2]/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "TEST-1010101010"
+    }, {
+      "id": "dd48a18b-d029-4320-80ae-aee1008927a0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.el-button--primary:nth-child(3) > span",
+      "targets": [
+        ["css=.el-button--primary:nth-child(3) > span", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/section/div/div/div/div/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'查询结果')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1b076f3-90e2-4512-9ca2-b15bd08daa82",
+      "comment": "",
+      "command": "waitForText",
+      "target": "css=.el-pagination__total",
+      "targets": [
+        ["css=.el-pagination__total", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/section/div/div[5]/div/span", "xpath:idRelative"],
+        ["xpath=//div[5]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'共 1 条')]", "xpath:innerText"]
+      ],
+      "value": "共 1 条"
+    }, {
+      "id": "d324009b-595d-4f69-8fa7-48ee85679fa9",
+      "comment": "",
+      "command": "waitForText",
+      "target": "css=.el-table_1_column_5 p:nth-child(2)",
+      "targets": [
+        ["css=.el-table_1_column_5 p:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/section/div/div[3]/div/div[3]/table/tbody/tr/td[5]/div/p[2]", "xpath:idRelative"],
+        ["xpath=//td[5]/div/p[2]", "xpath:position"],
+        ["xpath=//p[contains(.,'货号：TEST-1010101010')]", "xpath:innerText"]
+      ],
+      "value": "货号：TEST-1010101010"
+    }]
   }],
   "suites": [{
     "id": "4ecb58be-563e-4284-ab2e-21f45d0d573e",
@@ -144,7 +239,14 @@
     "parallel": false,
     "timeout": 300,
     "tests": ["34b51628-f94a-4990-8f0c-f73fdd05f7ec"]
+  }, {
+    "id": "c4bc4b8a-a559-4c96-ae3a-277f40b376bc",
+    "name": "pms-product-page",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["05c00168-b249-4932-9701-b772e174f73c", "0204d52f-3614-4c4a-aa7d-906a6e7eb915"]
   }],
-  "urls": ["http://admin.shop.com/", "http://admin.shop.com/#/login"],
+  "urls": ["http://admin.shop.com/", "http://admin.shop.com/#/login", "http://admin.shop.com/#/pms/product"],
   "plugins": []
 }
