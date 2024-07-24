@@ -10,5 +10,6 @@ def baseurl():
 @pytest.fixture(scope="session")
 def driver():
     driver = webdriver.Chrome()
+    driver.implicitly_wait(5)
     yield driver
     driver.quit()

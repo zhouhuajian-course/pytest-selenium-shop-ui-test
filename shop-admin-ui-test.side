@@ -224,6 +224,243 @@
       ],
       "value": "货号：TEST-1010101010"
     }]
+  }, {
+    "id": "840cb075-564f-44a5-9f40-f7aa7389d405",
+    "name": "add-product-simple",
+    "commands": [{
+      "id": "a72c9c49-eefe-4230-81ae-2e7529c588f2",
+      "comment": "",
+      "command": "open",
+      "target": "http://admin.shop.com/#/pms/add-product",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b0c82d22-1e38-430a-8852-3a5ece25965e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.el-cascader__label",
+      "targets": [
+        ["css=.el-cascader__label", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/section/div/div/div[2]/form/div/div/span/span", "xpath:idRelative"],
+        ["xpath=//div/div/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "faa7b0c2-7889-4b8f-a62d-d5bd0b33912b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.el-cascader-menu__item:nth-child(1)",
+      "targets": [
+        ["css=.el-cascader-menu__item:nth-child(1)", "css:finder"],
+        ["xpath=//ul[@id='cascader-menu-463']/li", "xpath:idRelative"],
+        ["xpath=//div[2]/ul/li", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3bfd64b1-99d2-4384-8bf1-86f6042cf3a9",
+      "comment": "选择 冰箱",
+      "command": "click",
+      "target": "xpath=//li[contains(.,'冰箱')]",
+      "targets": [
+        ["id=menu-9356-1-0", "id"],
+        ["css=#menu-9356-1-0", "css:finder"],
+        ["xpath=//li[@id='menu-9356-1-0']", "xpath:attributes"],
+        ["xpath=//ul[@id='menu-9356-1']/li", "xpath:idRelative"],
+        ["xpath=//ul[2]/li", "xpath:position"],
+        ["xpath=//li[contains(.,'冰箱')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "25492fb0-98b6-45e0-8d2c-39811050b167",
+      "comment": "",
+      "command": "type",
+      "target": "css=.is-required:nth-child(2) .el-input__inner",
+      "targets": [
+        ["css=.is-required:nth-child(2) .el-input__inner", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div[2]/section/div/div/div[2]/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": "111"
+    }, {
+      "id": "6544dbcf-b15d-4602-ab29-45b311119599",
+      "comment": "",
+      "command": "type",
+      "target": "css=.is-required:nth-child(3) .el-input__inner",
+      "targets": [
+        ["css=.is-required:nth-child(3) .el-input__inner", "css:finder"],
+        ["xpath=(//input[@type='text'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div[2]/section/div/div/div[2]/form/div[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/input", "xpath:position"]
+      ],
+      "value": "222"
+    }, {
+      "id": "61fb3526-932e-4931-92e3-4d1c58a15cfc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.is-required .el-select .el-input__inner",
+      "targets": [
+        ["css=.is-required .el-select .el-input__inner", "css:finder"],
+        ["xpath=(//input[@type='text'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div[2]/section/div/div/div[2]/form/div[4]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d6ffb9d4-0fdc-4408-9d4d-180738332291",
+      "comment": "选择测试品牌9",
+      "command": "click",
+      "target": "xpath=//li[contains(.,'测试品牌9')]",
+      "targets": [
+        ["css=.hover", "css:finder"],
+        ["xpath=//div[3]/div/div/ul/li", "xpath:position"],
+        ["xpath=//li[contains(.,'测试品牌9')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b045b4bf-afda-49b8-bd5e-9bd7978ac283",
+      "comment": "",
+      "command": "click",
+      "target": "css=.el-form-item__content > .el-button--primary:nth-child(1) > span",
+      "targets": [
+        ["css=.el-form-item__content > .el-button--primary:nth-child(1) > span", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/section/div/div/div[2]/form/div[13]/div/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'下一步，填写商品促销')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "73c1be63-d2a1-4c2b-abf8-b75d0c4d4f9f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.el-form-item:nth-child(17) .el-button--primary > span",
+      "targets": [
+        ["css=.el-form-item:nth-child(17) .el-button--primary > span", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/section/div/div/div[3]/form/div[17]/div/button[2]/span", "xpath:idRelative"],
+        ["xpath=//div[17]/div/button[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'下一步，填写商品属性')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "916344bf-903d-4289-942a-e00919fa4072",
+      "comment": "",
+      "command": "click",
+      "target": "css=.el-form-item:nth-child(6) .el-button--primary > span",
+      "targets": [
+        ["css=.el-form-item:nth-child(6) .el-button--primary > span", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/section/div/div/div[4]/form/div[6]/div/button[2]/span", "xpath:idRelative"],
+        ["xpath=//div[6]/div/button[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'下一步，选择商品关联')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c6c5f340-8935-4475-88d4-24071411f1a2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.el-form-item:nth-child(3) .el-button--primary",
+      "targets": [
+        ["css=.el-form-item:nth-child(3) .el-button--primary", "css:finder"],
+        ["xpath=(//button[@type='button'])[85]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div[2]/section/div/div/div[5]/form/div[3]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'完成，提交商品')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2e9db11f-14fd-40f0-a021-9741ffcb417a",
+      "comment": "点击 确定",
+      "command": "click",
+      "target": "css=.el-button--default:nth-child(2) > span",
+      "targets": [
+        ["css=.el-button--default:nth-child(2) > span", "css:finder"],
+        ["xpath=//div[3]/button[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'确定')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "2a0514d4-b0e2-4702-85ec-09aff8f6b8f5",
+    "name": "add-product-simple-part2",
+    "commands": [{
+      "id": "27ea578c-00ff-4813-8b7c-3154b3385a6e",
+      "comment": "",
+      "command": "open",
+      "target": "http://admin.shop.com/#/pms/product",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5db2e184-6bf4-4bf3-b592-dcdab47279c8",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.el-table__row:nth-child(1)",
+      "targets": [
+        ["css=.el-table__row:nth-child(1) > .el-table_1_column_2", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/section/div/div[3]/div/div[3]/table/tbody/tr/td[2]", "xpath:idRelative"],
+        ["xpath=//td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'78')]", "xpath:innerText"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "a8f53435-852d-4f0d-9860-69be1a4818e8",
+      "comment": "点击 编辑",
+      "command": "click",
+      "target": "css=.el-table__row:nth-child(1) .el-button--default:nth-child(2)",
+      "targets": [
+        ["css=.el-table__row:nth-child(1) .el-button--default:nth-child(2)", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div[2]/section/div/div[3]/div/div[3]/table/tbody/tr/td[11]/div/p/button[2]", "xpath:idRelative"],
+        ["xpath=//p/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'编辑')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "08056b56-6bbc-4a11-a3fc-ac50bcc5a35d",
+      "comment": "",
+      "command": "waitForText",
+      "target": "css=.el-cascader__label",
+      "targets": [
+        ["css=.el-cascader__label", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/section/div/div/div[2]/form/div/div/span/span", "xpath:idRelative"],
+        ["xpath=//div/div/span/span", "xpath:position"]
+      ],
+      "value": "家用电器 / 冰箱"
+    }, {
+      "id": "ec52c38f-0b75-4c8f-8c06-0f94336ca522",
+      "comment": "",
+      "command": "assertValue",
+      "target": "css=.is-required:nth-child(2) .el-input__inner",
+      "targets": [
+        ["css=.is-required:nth-child(2) .el-input__inner", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div[2]/section/div/div/div[2]/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": "111"
+    }, {
+      "id": "f57ddad1-53fb-45d8-824e-ae925c854bfd",
+      "comment": "",
+      "command": "assertValue",
+      "target": "css=.is-required:nth-child(3) .el-input__inner",
+      "targets": [
+        ["css=.is-required:nth-child(3) .el-input__inner", "css:finder"],
+        ["xpath=(//input[@type='text'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div[2]/section/div/div/div[2]/form/div[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/input", "xpath:position"]
+      ],
+      "value": "222"
+    }, {
+      "id": "c7db028d-cc6e-45ef-bbb2-b2db966d1709",
+      "comment": "",
+      "command": "assertValue",
+      "target": "css=.is-required .el-select .el-input__inner",
+      "targets": [
+        ["css=.is-required .el-select .el-input__inner", "css:finder"],
+        ["xpath=(//input[@type='text'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div[2]/section/div/div/div[2]/form/div[4]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div/input", "xpath:position"]
+      ],
+      "value": "测试品牌9"
+    }]
   }],
   "suites": [{
     "id": "4ecb58be-563e-4284-ab2e-21f45d0d573e",
@@ -246,7 +483,14 @@
     "parallel": false,
     "timeout": 300,
     "tests": ["05c00168-b249-4932-9701-b772e174f73c", "0204d52f-3614-4c4a-aa7d-906a6e7eb915"]
+  }, {
+    "id": "16490881-015e-4762-b561-d8bec7993ea3",
+    "name": "pms-add-product-page",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["840cb075-564f-44a5-9f40-f7aa7389d405", "2a0514d4-b0e2-4702-85ec-09aff8f6b8f5"]
   }],
-  "urls": ["http://admin.shop.com/", "http://admin.shop.com/#/login", "http://admin.shop.com/#/pms/product"],
+  "urls": ["http://admin.shop.com/", "http://admin.shop.com/#/login", "http://admin.shop.com/#/pms/product", "http://admin.shop.com/#/pms/add-product"],
   "plugins": []
 }
