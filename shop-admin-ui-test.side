@@ -2,7 +2,7 @@
   "id": "552b1ea6-93d0-4342-9269-875667d35bdd",
   "version": "2.0",
   "name": "shop-admin-ui-test",
-  "url": "http://admin.shop.com/#/pms/product",
+  "url": "http://admin.shop.com/#/pms/brand",
   "tests": [{
     "id": "8ce1a134-a7f6-4979-b426-b24a0f9c3f65",
     "name": "login-fail",
@@ -461,6 +461,188 @@
       ],
       "value": "测试品牌9"
     }]
+  }, {
+    "id": "6218eded-47bb-4c3c-9885-def3bc0585c4",
+    "name": "add-brand-then-delete",
+    "commands": [{
+      "id": "7a4c8c3a-a647-460b-9065-013e74543eae",
+      "comment": "",
+      "command": "open",
+      "target": "http://admin.shop.com/#/pms/brand",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0275e4ab-9dcf-43f6-8f6f-e483954bb1a7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-add",
+      "targets": [
+        ["css=.btn-add", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div[2]/section/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'添加')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f7af8987-7d73-424c-80eb-0345e301762b",
+      "comment": "",
+      "command": "type",
+      "target": "css=.is-required .el-input__inner",
+      "targets": [
+        ["css=.is-required .el-input__inner", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div[2]/section/div/div/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "123456"
+    }, {
+      "id": "80260009-ba17-4a2d-968f-820baffea24f",
+      "comment": "",
+      "command": "type",
+      "target": "name=file",
+      "targets": [
+        ["name=file", "name"],
+        ["css=.is-required .el-upload__input", "css:finder"],
+        ["xpath=//input[@name='file']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div[2]/section/div/div/form/div[3]/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/input", "xpath:position"]
+      ],
+      "value": "C:\\Users\\zhouhuajian\\Downloads\\logo.png"
+    }, {
+      "id": "c999d32d-ace8-4547-ad37-42948365a660",
+      "comment": "",
+      "command": "click",
+      "target": "css=.el-form-item:nth-child(8) .el-radio:nth-child(1) .el-radio__inner",
+      "targets": [
+        ["css=.el-form-item:nth-child(8) .el-radio:nth-child(1) .el-radio__inner", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/section/div/div/form/div[8]/div/div/label/span/span", "xpath:idRelative"],
+        ["xpath=//div[8]/div/div/label/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ebab6456-cfc0-46d7-a7d8-f890006c3cfa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.el-form-item__content > .el-button--primary",
+      "targets": [
+        ["css=.el-form-item__content > .el-button--primary", "css:finder"],
+        ["xpath=(//button[@type='button'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div[2]/section/div/div/form/div[9]/div/button", "xpath:idRelative"],
+        ["xpath=//div[9]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'提交')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0d7e2434-c662-46e1-a04b-b7417dba5b5f",
+      "comment": "点击确定",
+      "command": "click",
+      "target": "css=.el-button--small:nth-child(2)",
+      "targets": [
+        ["css=.el-button--small:nth-child(2)", "css:finder"],
+        ["xpath=(//button[@type='button'])[9]", "xpath:attributes"],
+        ["xpath=//div[3]/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'确定')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "87ea9929-93a6-41b8-b3ac-6eff6f435bb9",
+      "comment": "访问品牌管理 然后重新加载",
+      "command": "open",
+      "target": "http://admin.shop.com/#/pms/brand",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7afb2fcb-fb6d-4e39-82cd-80e4f930c2b8",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.el-table__row:nth-child(1)",
+      "targets": [
+        ["css=.el-table__row:nth-child(1) > .el-table_1_column_2", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/section/div/div[3]/div/div[3]/table/tbody/tr/td[2]", "xpath:idRelative"],
+        ["xpath=//td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'94')]", "xpath:innerText"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "5a1c4123-bcb1-4ad5-a626-a223a87d6703",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.el-table__row:nth-child(1) > .el-table_1_column_3 > .cell",
+      "targets": [
+        ["css=.el-table__row:nth-child(1) > .el-table_1_column_3 > .cell", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/section/div/div[3]/div/div[3]/table/tbody/tr/td[3]/div", "xpath:idRelative"],
+        ["xpath=//td[3]/div", "xpath:position"]
+      ],
+      "value": "123456"
+    }, {
+      "id": "6ce60f99-230f-43eb-8fd2-287a804d73b1",
+      "comment": "",
+      "command": "assertChecked",
+      "target": "css=.el-table__row:nth-child(1) > .el-table_1_column_6 .el-switch__input",
+      "targets": [
+        ["css=.el-table__row:nth-child(1) > .el-table_1_column_6 .el-switch__core", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/section/div/div[3]/div/div[3]/table/tbody/tr/td[6]/div/div/span", "xpath:idRelative"],
+        ["xpath=//td[6]/div/div/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f5dbe048-95d8-41c9-82f4-b12acf98a16a",
+      "comment": "",
+      "command": "assertNotChecked",
+      "target": "css=.el-table__row:nth-child(1) > .el-table_1_column_7 .el-switch__input",
+      "targets": [
+        ["css=.el-table__row:nth-child(1) > .el-table_1_column_7 .el-switch__core", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/section/div/div[3]/div/div[3]/table/tbody/tr/td[7]/div/div/span", "xpath:idRelative"],
+        ["xpath=//td[7]/div/div/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "31bfa6fe-8a7a-4b3e-857f-95f802ba0590",
+      "comment": "点击删除",
+      "command": "click",
+      "target": "css=.el-table__row:nth-child(1) .el-button--danger > span",
+      "targets": [
+        ["css=.el-table__row:nth-child(1) .el-button--danger > span", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/section/div/div[3]/div/div[3]/table/tbody/tr/td[9]/div/button[2]/span", "xpath:idRelative"],
+        ["xpath=//td[9]/div/button[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'删除')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "39ebc665-ab32-408e-81db-75f3899a7bcc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.el-button--default:nth-child(2) > span",
+      "targets": [
+        ["css=.el-button--default:nth-child(2) > span", "css:finder"],
+        ["xpath=//div[3]/button[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c8d4ec83-dc6d-448c-b838-3df6f3c51f8c",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.el-table__row:nth-child(1)",
+      "targets": [
+        ["css=.el-table__row:nth-child(1) > .el-table_1_column_2", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/section/div/div[3]/div/div[3]/table/tbody/tr/td[2]", "xpath:idRelative"],
+        ["xpath=//td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'94')]", "xpath:innerText"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "6ad999f7-f6e3-4c33-8601-c18d2f6370fd",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "css=.el-table__row:nth-child(1) > .el-table_1_column_3 > .cell",
+      "targets": [
+        ["css=.el-table__row:nth-child(1) > .el-table_1_column_3 > .cell", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/section/div/div[3]/div/div[3]/table/tbody/tr/td[3]/div", "xpath:idRelative"],
+        ["xpath=//td[3]/div", "xpath:position"]
+      ],
+      "value": "123456"
+    }]
   }],
   "suites": [{
     "id": "4ecb58be-563e-4284-ab2e-21f45d0d573e",
@@ -490,7 +672,14 @@
     "parallel": false,
     "timeout": 300,
     "tests": ["840cb075-564f-44a5-9f40-f7aa7389d405", "2a0514d4-b0e2-4702-85ec-09aff8f6b8f5"]
+  }, {
+    "id": "1d1cb7b7-a4e6-4ed8-b06c-4b5251edb693",
+    "name": "pms-brand-page",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["6218eded-47bb-4c3c-9885-def3bc0585c4"]
   }],
-  "urls": ["http://admin.shop.com/", "http://admin.shop.com/#/login", "http://admin.shop.com/#/pms/product", "http://admin.shop.com/#/pms/add-product"],
+  "urls": ["http://admin.shop.com/", "http://admin.shop.com/#/login", "http://admin.shop.com/#/pms/product", "http://admin.shop.com/#/pms/add-product", "http://admin.shop.com/#/pms/brand"],
   "plugins": []
 }
