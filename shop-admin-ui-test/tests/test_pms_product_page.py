@@ -1,3 +1,5 @@
+import time
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
@@ -5,6 +7,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 def test_search_by_product_name(baseurl, driver):
     driver.get(baseurl + "/pms/product")
+    time.sleep(1)
     driver.find_element(By.CSS_SELECTOR, ".el-form-item:nth-child(1) .el-input__inner").send_keys("TEST-测试电视")
     driver.find_element(By.CSS_SELECTOR, ".el-button--primary:nth-child(3)").click()
     trs = driver.find_elements(By.CSS_SELECTOR, "tbody > tr")

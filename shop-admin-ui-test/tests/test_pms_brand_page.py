@@ -18,6 +18,7 @@ def test_add_brand_then_delete(baseurl, driver):
 
     driver.find_element(By.CSS_SELECTOR,
                              ".el-form-item:nth-child(8) .el-radio:nth-child(1) .el-radio__inner").click()
+    time.sleep(0.5)
     driver.find_element(By.CSS_SELECTOR, ".el-form-item__content > .el-button--primary").click()
     driver.find_element(By.CSS_SELECTOR, ".el-button--small:nth-child(2)").click()
     # 验证

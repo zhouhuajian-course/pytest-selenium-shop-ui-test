@@ -21,6 +21,7 @@ def test_add_product_simple(baseurl, driver):
     driver.find_element(By.CSS_SELECTOR, ".is-required:nth-child(3) .el-input__inner").send_keys(product_subtitle)
 
     driver.find_element(By.CSS_SELECTOR, ".is-required .el-select .el-input__inner").click()
+    time.sleep(0.5)
     driver.find_element(By.XPATH, "//li[contains(.,\'测试品牌9\')]").click()
 
     driver.find_element(By.CSS_SELECTOR,

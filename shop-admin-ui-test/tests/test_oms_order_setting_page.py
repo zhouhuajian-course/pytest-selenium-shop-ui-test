@@ -1,3 +1,5 @@
+import time
+
 from selenium.webdriver import ActionChains, Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
@@ -6,6 +8,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 def test_order_setting_form_validation(baseurl, driver):
     driver.get(baseurl + "/oms/order-setting")
+    time.sleep(0.5)
     # 1
     element = driver.find_element(By.CSS_SELECTOR, ".el-form-item:nth-child(1) .el-input__inner")
     actions = ActionChains(driver)
